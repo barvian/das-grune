@@ -1,28 +1,30 @@
 <script lang="ts">
     import Img from '@zerodevx/svelte-img'
 	import { observe } from '$lib/actions'
-    import { onMount } from 'svelte'
+    import { onMount, type ComponentProps } from 'svelte'
 	import { fly } from 'svelte/transition'
     import { expoOut } from 'svelte/easing'
     
-    // Not aware of types for this (https://github.com/zerodevx/svelte-img/blob/master/src/lib/FxReveal.svelte)
-    export let src: any[] = []
+    export let src: ComponentProps<Img>['src']
+    export let alt: ComponentProps<Img>['alt']
 
     let cls = ''
     export { cls as class }
     
     let ref: HTMLImageElement
-    let loaded = false
+    export let loaded = false
     let entered = false
     
     let sources: typeof src, lqip: any
-    if (src.length) {
-      const b64 = src.find((i) => i.base64)
+    if (src?.length) {
+        const b64 = src.find((i) => i.base64)
       lqip = b64
       sources = src.filter((i) => !i.base64)
     }
-
-
+    
+    
+    // TODO: this is a roundabout way to get the pixel data, that could/should probably
+    // be implemented as a directive with vite-imagetools (would work in SSR that way too)
     let pixels: [number, number, number, number][]
     $: if (lqip && entered) {
       const img = new Image()
@@ -39,21 +41,20 @@
           pixels = newPixels
       }
     }
-    $:console.log(pixels, loaded)
     
     onMount(() => {
       if (ref.complete) loaded = true
     })
 </script>
 
-{#if src.length}
+{#if src?.length}
     <div
         class="relative"
         use:observe
         on:enter|once={() => entered = true}
     >
         <img class="absolute top-0 left-0 w-full h-full rendering-pixelated" src={lqip.base64} alt="" />
-        <Img class="relative {cls}" src={sources} bind:ref on:load={() => loaded = true} on:click {...$$restProps} />
+        <Img class="relative {cls}" src={sources} {alt} bind:ref on:load={() => loaded = true} on:click {...$$restProps} />
         {#if pixels && !loaded}
             <div class="grid absolute inset-0" style:grid-template-rows="repeat({Math.floor(lqip.height)}, minmax(0, 1fr))" style:grid-template-columns="repeat({Math.floor(lqip.width)}, minmax(0, 1fr))">
                 {#each pixels as p, i}
