@@ -73,8 +73,8 @@ export default {
 		containerQueryPlugin,
 		plugin(({ addVariant }) => {
 			addVariant('fonts-loaded', ['[data-no-js]:root &', '[data-js][data-fonts-loaded]:root &'])
-			addVariant('entered', ['[data-no-js]:root) &', '&.entered', '.entered &'])
-			addVariant('entering', ['[data-no-js]:root) &', '&.entering', '.entering &'])
+			addVariant('entered', ['[data-no-js]:root &', '&.entered', '.entered &'])
+			addVariant('entering', ['[data-no-js]:root &', '&.entering', '.entering &'])
 		})
 	]
 } satisfies Config
