@@ -1,7 +1,9 @@
 <script lang="ts">
     import Img from '@zerodevx/svelte-img'
+	import { observe } from '$lib/actions'
     import { onMount } from 'svelte'
-	import { observe } from '@zerodevx/svelte-img/utils'
+	import { fly } from 'svelte/transition'
+    import { expoOut } from 'svelte/easing'
     
     // Not aware of types for this (https://github.com/zerodevx/svelte-img/blob/master/src/lib/FxReveal.svelte)
     export let src: any[] = []
@@ -10,70 +12,55 @@
     export { cls as class }
     
     let ref: HTMLImageElement
-    let mounted = false
     let loaded = false
-    let inview = false
+    let entered = false
     
-    let sources: typeof src, lqip: string
-    $: if (src.length) {
-      const { base64 } = src.find((i) => i.base64) || {}
-      lqip = base64
+    let sources: typeof src, lqip: any
+    if (src.length) {
+      const b64 = src.find((i) => i.base64)
+      lqip = b64
       sources = src.filter((i) => !i.base64)
     }
 
-    $: if (sources && mounted && loaded && inview) {
-        // reset and kick off an animation
-        pxIndex = 0
-        completed = false
-        animate()
+
+    let pixels: [number, number, number, number][]
+    $: if (lqip && entered) {
+      const img = new Image()
+      img.src = lqip.base64
+      const canvas = new OffscreenCanvas(Math.floor(lqip.width), Math.floor(lqip.height))
+      const ctx = canvas.getContext('2d')
+      ctx?.drawImage(img, 0, 0)
+      const imageData = ctx?.getImageData(0, 0, canvas.width, canvas.height)
+      if (imageData) {
+          const newPixels: typeof pixels = []
+          for (let i = 0; i < canvas.width * canvas.height * 4; i += 4) {
+            newPixels.push([imageData.data[i], imageData.data[i+1], imageData.data[i+2], imageData.data[i+3]])
+          }
+          pixels = newPixels
+      }
     }
-    
-    let completed = false
-    let pxIndex = 0
-    const pxFactorValues = [0.01, 0.02, 0.04, 0.08/*, 0.16*/]
-    function animate() {
-        if (pxIndex >= pxFactorValues.length) {
-            completed = true
-            return
-        }
-
-        setTimeout(() => {
-            render()
-            pxIndex++
-            animate();
-        }, 80)
-    }
-
-    let canvas: HTMLCanvasElement
-    $: context = canvas?.getContext('2d')
-    function render() {
-        if (!ref || !context) return
-
-        const amt = pxFactorValues[pxIndex]
-        const w = ref?.width * amt, h = ref?.height * amt
-
-        context.imageSmoothingEnabled = false
-
-        // render smaller image
-        context?.drawImage(ref, 0, 0, w, h)
-        // stretch the smaller image
-        context?.drawImage(canvas, 0, 0, w, h, -ref.width * 0.025, -ref.height * 0.025, ref.width * 1.05, ref.height * 1.05) // increase height to not have a gap at the end of the image with big pixels
-    }
+    $:console.log(pixels, loaded)
     
     onMount(() => {
-      mounted = true
       if (ref.complete) loaded = true
     })
 </script>
 
 {#if src.length}
     <div
-        class="relative overflow-hidden slide-up"
+        class="relative"
         use:observe
-        on:enter={() => inview = true}
+        on:enter|once={() => entered = true}
     >
-        <img class="absolute top-0 left-0 w-full h-full object-cover rendering-pixelated" src={lqip} alt="" />
-        <canvas bind:this={canvas} width={ref?.width} height={ref?.height} class="absolute rendering-pixelated top-0 left-0 w-full" />
-        <Img class="relative {cls} {completed ? '' : 'invisible'}" src={sources} bind:ref on:load={() => loaded = true} on:click {...$$restProps} />
+        <img class="absolute top-0 left-0 w-full h-full rendering-pixelated" src={lqip.base64} alt="" />
+        <Img class="relative {cls}" src={sources} bind:ref on:load={() => loaded = true} on:click {...$$restProps} />
+        {#if pixels && !loaded}
+            <div class="grid absolute inset-0" style:grid-template-rows="repeat({Math.floor(lqip.height)}, minmax(0, 1fr))" style:grid-template-columns="repeat({Math.floor(lqip.width)}, minmax(0, 1fr))">
+                {#each pixels as p, i}
+                    {@const opt = [{ x: '-100%' }, { x: '100%' }, { y: '-100%' }, { y: '100%'}][Math.floor(Math.random()*4)]}
+                    <div class="overflow-hidden"><div out:fly|global={{...opt, duration: 700, delay: i*1.5, opacity: 1, easing: expoOut}} class="w-full h-full" style:background-color="rgba({p[0]},{p[1]},{p[2]},{p[3] / 255})" /></div>
+                {/each}
+            </div>
+        {/if}
     </div>
 {/if}
