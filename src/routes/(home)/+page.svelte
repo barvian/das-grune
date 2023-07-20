@@ -233,8 +233,23 @@
 				<span class="block">Let's discuss your ideas</span>
 			</h2>
 			<div class="flex justify-center w-full gap-5 mt-16">
-				<span class="slide-up"><span class="cursor-not-allowed block rounded-full text-2xl font-medium uppercase tracking-[0.02em] bg-black px-10 pt-4 pb-3 text-[#d5ff3f]">Talk now</span></span>
-				<span class="slide-up"><span class="cursor-not-allowed block rounded-full text-2xl font-medium uppercase tracking-[0.02em] border-2 px-10 pt-4 pb-3">Follow us</span></span>
+				<div class="slide-up">
+					<div class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] bg-black px-10 pt-5 pb-4 text-[#d5ff3f] group">
+						<div class="group-hover:opacity-100 opacity-0 bg-[#292929] absolute inset-0 transition duration-150" />
+						<div class="overlap overflow-hidden">
+							<span class="inline-block group-hover:-translate-y-full transition duration-500 ease-out-expo">Talk now</span>
+							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo" aria-hidden>Talk now</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide-up">
+					<div class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-10 pt-5 pb-4 group">
+						<div class="overlap overflow-hidden">
+							<span class="inline-block group-hover:-translate-y-full transition duration-500 ease-out-expo">Talk now</span>
+							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo" aria-hidden>Talk now</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
