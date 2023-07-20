@@ -5,14 +5,15 @@
 	import Globe from '$lib/icons/Globe.svelte'
 	import Twinkle from '$lib/icons/Twinkle.svelte'
 	import Quote from './Quote.svelte'
-	import Image from '$lib/MosiacImage.svelte'
+	import Image from '$lib/MosaicImage.svelte'
 	import Feature from './Feature.svelte'
 	import ballerina from '$lib/img/ballerina.jpg?run'
-	import swirl from '$lib/img/swirl.jpg?run&aspect=405:370'
+	import brand from '$lib/img/services/brand.jpg?run'
+	import graphic from '$lib/img/services/graphic.jpg?run'
+	import ui from '$lib/img/services/ui.jpg?run'
+	import web from '$lib/img/services/web.jpg?run'
 	import vid from '$lib/img/vid.jpg?run'
 	import Service from './Service.svelte'
-
-	const services = [['UI/UX Design', swirl]]
 </script>
 
 <svelte:head>
@@ -40,7 +41,7 @@
 				<span class="slide-up inline-block"><span class="inline-block">ideas</span></span>
 			</h1>
 			<div class="w-full relative flex flex-col gap-[8%] justify-start items-center">
-				<div class="slide-up delay-[50ms]">
+				<div class="slide-up delay-[100ms]">
 					<div class="rounded-full overflow-hidden relative cursor-not-allowed group border-4 border-[#bbe132]">
 						<Image src={vid} alt="Teaser video" />
 						<div class="transition duration-300 group-hover:translate-x-4 rounded-full absolute top-1.5 left-1.5 aspect-square h-[calc(100%-theme(spacing[1.5])*2)]">
@@ -49,10 +50,10 @@
 								<div class="absolute inset-1 rounded-full overflow-hidden bg-[#101010] flex items-center justify-center">
 									<div class="absolute inset-0 bg-[#d5ff3f] transition duration-300 opacity-0 group-hover:opacity-100" />
 									<div class="overlap items-center justify-center h-2/5 ml-[5%]">
-										<svg class="h-full relative group-hover:translate-x-[220%] transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg class="h-full relative group-hover:translate-x-[100%] transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#D5FF3F"/>
 										</svg>
-										<svg class="h-full relative -translate-x-[220%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg class="h-full relative -translate-x-[100%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#101010"/>
 										</svg>
 									</div>
@@ -145,8 +146,11 @@
 				</li>
 			</ul>
 		</header>
-		<ul>
-			<Service label="UI Design" img={swirl} />
+		<ul class="border-t border-[#2b2b2b]">
+			<Service label="UI/UX Design" img={ui} />
+			<Service label="Web Design" img={web} />
+			<Service label="Brand Design" img={brand} />
+			<Service label="Graphic Design" img={graphic} />
 		</ul>
 	</div>
 </section>
@@ -201,10 +205,8 @@
 		</header>
 		<ul class="grid grid-cols-3 gap-[2.5%]">
 			<li class="overflow-hidden">
-				<Image src={swirl} class="" />
 			</li>
 			<li class="col-span-2 overflow-hidden">
-				<Image src={swirl} class="" />
 			</li>
 		</ul>
 	</div>
@@ -236,17 +238,17 @@
 				<div class="slide-up">
 					<div class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] bg-black px-10 pt-5 pb-4 text-[#d5ff3f] group">
 						<div class="group-hover:opacity-100 opacity-0 bg-[#292929] absolute inset-0 transition duration-150" />
-						<div class="overlap overflow-hidden">
+						<div class="overlap overflow-hidden text-center">
 							<span class="inline-block group-hover:-translate-y-full transition duration-500 ease-out-expo">Talk now</span>
-							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo" aria-hidden>Talk now</span>
+							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo font-semibold" aria-hidden>Talk now</span>
 						</div>
 					</div>
 				</div>
 				<div class="slide-up">
 					<div class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-10 pt-5 pb-4 group">
-						<div class="overlap overflow-hidden">
-							<span class="inline-block group-hover:-translate-y-full transition duration-500 ease-out-expo">Talk now</span>
-							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo" aria-hidden>Talk now</span>
+						<div class="overlap overflow-hidden text-center">
+							<span class="inline-block group-hover:-translate-y-full transition duration-500 ease-out-expo">Follow us</span>
+							<span class="inline-block translate-y-full group-hover:translate-y-0 transition duration-500 ease-out-expo font-semibold" aria-hidden>Follow us</span>
 						</div>
 					</div>
 				</div>

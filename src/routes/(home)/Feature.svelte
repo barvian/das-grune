@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Img from '$lib/MosiacImage.svelte'
+	import Img from '$lib/MosaicImage.svelte'
 	import { spring, type Spring } from 'svelte/motion'
 	import type { ComponentProps } from 'svelte'
     
