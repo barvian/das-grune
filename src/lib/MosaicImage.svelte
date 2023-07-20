@@ -8,6 +8,7 @@
     export let src: ComponentProps<Img>['src']
     export let alt: ComponentProps<Img>['alt']
 
+    export let wrapperClass = ''
     let cls = ''
     export { cls as class }
     
@@ -45,7 +46,7 @@
 
 {#if src?.length}
     <div
-        class="relative"
+        class="relative {wrapperClass}"
         use:observe
         on:enter|once={() => entered = true}
     >

@@ -12,8 +12,14 @@
 	import graphic from '$lib/img/services/graphic.jpg?run'
 	import ui from '$lib/img/services/ui.jpg?run'
 	import web from '$lib/img/services/web.jpg?run'
+	import diamond from '$lib/img/quote/diamond.jpg?run'
+	import wave from '$lib/img/quote/wave.jpg?run'
+	import swirl from '$lib/img/quote/swirl.jpg?run'
 	import vid from '$lib/img/vid.jpg?run'
 	import Service from './Service.svelte'
+	import Tag from '$lib/Tag.svelte'
+
+	const categories = ['Design', 'Development', 'Digital Marketing', 'SEO']
 </script>
 
 <svelte:head>
@@ -46,16 +52,16 @@
 						<Image src={vid} alt="Teaser video" />
 						<div class="transition duration-300 group-hover:translate-x-4 rounded-full absolute top-1.5 left-1.5 aspect-square h-[calc(100%-theme(spacing[1.5])*2)]">
 							<div class="absolute inset-0 rounded-full overflow-hidden bg-[#292929]">
-								<div class="absolute inset-0 bg-[#101010] opacity-0 group-hover:opacity-100 transition duration-300" />
+								<!-- <div class="absolute inset-0 bg-[#101010] opacity-0 group-hover:opacity-100 transition duration-300" /> -->
 								<div class="absolute inset-1 rounded-full overflow-hidden bg-[#101010] flex items-center justify-center">
-									<div class="absolute inset-0 bg-[#d5ff3f] transition duration-300 opacity-0 group-hover:opacity-100" />
+									<!-- <div class="absolute inset-0 bg-[#d5ff3f] transition duration-300 opacity-0 group-hover:opacity-100" /> -->
 									<div class="overlap items-center justify-center h-2/5 ml-[5%]">
-										<svg class="h-full relative group-hover:translate-x-[100%] transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg class="h-full relative" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#D5FF3F"/>
 										</svg>
-										<svg class="h-full relative -translate-x-[100%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<!-- <svg class="h-full relative -translate-x-[100%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#101010"/>
-										</svg>
+										</svg> -->
 									</div>
 								</div>
 							</div>
@@ -75,18 +81,14 @@
 			</div>
 		</div>
 		<div class="flex items-center justify-start gap-5 mt-10">
-			<span class="inline-block slide-up">
-				<span class="flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[50ms]">
-					<Crown class="w-5" />
-					2022 Best Agency
-				</span>
-			</span>
-			<span class="inline-block slide-up">
-				<span class="flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms]">
-					<Globe class="w-5" />
-					World Class Agency
-				</span>
-			</span>
+			<Tag class="delay-[50ms]">
+				<Crown class="w-5" />
+				2022 Best Agency
+			</Tag>
+			<Tag class="delay-[100ms]">
+				<Globe class="w-5" />
+				World Class Agency
+			</Tag>
 			<div class="flex items-center flex-1">
 				<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 delay-[250ms] ease-out-expo" />
 				<div class="bg-[#bce138] h-0.5 flex-1 origin-left scale-x-0 fonts-loaded:entered:scale-x-100 transition-transform duration-1000 delay-[300ms]" />
@@ -104,7 +106,7 @@
 	</div>
 </header>
 <Marquee />
-<section class="bg-[#171717] pt-20">
+<section class="bg-[#171717] pt-20 pb-32">
 	<div class="container">
 		<header class="flex justify-between items-end mb-16 gap-[5%]" use:observe>
 			<div>
@@ -120,30 +122,14 @@
 				</div>
 			</div>
 			<ul class="justify-end flex flex-wrap gap-5">
-				<li>
-					<a class="text-[#c4c4c4] inline-flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Design
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] inline-flex cursor-not-allowed items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Development
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] inline-flex cursor-not-allowed items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Digital Marketing
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] inline-flex cursor-not-allowed items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						SEO
-					</a>
-				</li>
+				{#each categories as label, i}
+					<li>
+						<Tag class="cursor-not-allowed {i == 0 ? 'text-[#c4c4c4]' : 'text-[#606060]' }" style="transition-delay: {i * 50 + 50}ms">
+							<Globe class="w-5" />
+							{label}
+						</Tag>
+					</li>
+				{/each}
 			</ul>
 		</header>
 		<ul class="border-t border-[#2b2b2b]">
@@ -155,9 +141,24 @@
 	</div>
 </section>
 <section class="bg-[#171717]">
-	<div class="container">
+	<div class="container @container">
 		<Quote>
-			A creative mind <span class="inline-block h-[1em] aspect-square bg-current" /> knows how to do the right thing at the right place and at the right time
+			A creative
+			<Image src={wave} wrapperClass="inline-block overflow-hidden rounded-full" class="h-[0.69em] w-auto" alt="" />
+			mind 
+			knows
+			<Image src={diamond} wrapperClass="inline-block overflow-hidden rounded-full" class="h-[0.69em] w-auto" alt="" />
+			how to do the
+			<div class="inline-block slide-up h-[0.69em]">
+				<div class="bg-[#d5ff3f] h-full w-[0.9em] rounded-full block relative overflow-hidden">
+					<svg class="h-2/5 absolute top-1/2 left-1/2 entered:-translate-x-1/2 entered:-translate-y-1/2 -translate-x-[150%] translate-y-[150%] transition duration-700 ease-out delay-100" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M20.1715 4H2.99991V0H26.9999V24H22.9999V6.82843L3.41412 26.4142L0.585693 23.5858L20.1715 4Z" fill="#1e1f1c"/>
+					</svg>									
+				</div>
+			</div>
+			right thing at the right place and at the
+			<Image src={swirl} wrapperClass="inline-block overflow-hidden rounded-full" class="h-[0.69em] w-auto" alt="" />
+			right time
 		</Quote>
 	</div>
 </section>
@@ -177,30 +178,14 @@
 				</div>
 			</div>
 			<ul class="justify-start flex flex-wrap gap-5">
-				<li>
-					<a class="text-[#c4c4c4] inline-flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Design
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] cursor-not-allowed inline-flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Development
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] cursor-not-allowed inline-flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						Digital Marketing
-					</a>
-				</li>
-				<li>
-					<a class="text-[#606060] cursor-not-allowed inline-flex items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 delay-[100ms] whitespace-nowrap">
-						<Globe class="w-5" />
-						SEO
-					</a>
-				</li>
+				{#each categories as label, i}
+					<li>
+						<Tag class="cursor-not-allowed {i == 0 ? 'text-[#c4c4c4]' : 'text-[#606060]' }" style="transition-delay: {i * 50 + 50}ms">
+							<Globe class="w-5" />
+							{label}
+						</Tag>
+					</li>
+				{/each}
 			</ul>
 		</header>
 		<ul class="grid grid-cols-3 gap-[2.5%]">
