@@ -9,7 +9,10 @@
 	import Feature from './Feature.svelte'
 	import ballerina from '$lib/img/ballerina.jpg?run'
 	import swirl from '$lib/img/swirl.jpg?run&aspect=405:370'
-	import swirl2 from '$lib/img/swirl.jpg?run'
+	import vid from '$lib/img/vid.jpg?run'
+	import Service from './Service.svelte'
+
+	const services = [['UI/UX Design', swirl]]
 </script>
 
 <svelte:head>
@@ -36,8 +39,28 @@
 				<span class="slide-up inline-block"><span class="inline-block">Digitize</span></span>
 				<span class="slide-up inline-block"><span class="inline-block">ideas</span></span>
 			</h1>
-			<div class="w-full relative flex flex-col justify-start items-center">
-				<Image src={swirl2} />
+			<div class="w-full relative flex flex-col gap-[8%] justify-start items-center">
+				<div class="slide-up delay-[50ms]">
+					<div class="rounded-full overflow-hidden relative cursor-not-allowed group border-4 border-[#bbe132]">
+						<Image src={vid} alt="Teaser video" />
+						<div class="transition duration-300 group-hover:translate-x-4 rounded-full absolute top-1.5 left-1.5 aspect-square h-[calc(100%-theme(spacing[1.5])*2)]">
+							<div class="absolute inset-0 rounded-full overflow-hidden bg-[#292929]">
+								<div class="absolute inset-0 bg-[#101010] opacity-0 group-hover:opacity-100 transition duration-300" />
+								<div class="absolute inset-1 rounded-full overflow-hidden bg-[#101010] flex items-center justify-center">
+									<div class="absolute inset-0 bg-[#d5ff3f] transition duration-300 opacity-0 group-hover:opacity-100" />
+									<div class="overlap items-center justify-center h-2/5 ml-[5%]">
+										<svg class="h-full relative group-hover:translate-x-[220%] transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#D5FF3F"/>
+										</svg>
+										<svg class="h-full relative -translate-x-[220%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#101010"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="flex gap-[20%] w-full justify-center items-center text-[#bce138]">
 					<div class="slide-up"><Twinkle class="h-7" /></div>
 					<div class="slide-up"><Twinkle class="h-7 delay-[50ms]" /></div>
@@ -123,7 +146,7 @@
 			</ul>
 		</header>
 		<ul>
-			<li class="text-6xl px-[5%]">UX Design</li>
+			<Service label="UI Design" img={swirl} />
 		</ul>
 	</div>
 </section>

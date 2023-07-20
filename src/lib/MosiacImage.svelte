@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Img from '@zerodevx/svelte-img'
+    import Img from '$lib/Image.svelte'
 	import { observe } from '$lib/actions'
-    import { onMount, type ComponentProps } from 'svelte'
+    import type { ComponentProps } from 'svelte'
 	import { fly } from 'svelte/transition'
     import { expoOut } from 'svelte/easing'
     
@@ -41,10 +41,6 @@
           pixels = newPixels
       }
     }
-    
-    onMount(() => {
-      if (ref.complete) loaded = true
-    })
 </script>
 
 {#if src?.length}
@@ -54,7 +50,7 @@
         on:enter|once={() => entered = true}
     >
         <img class="absolute top-0 left-0 w-full h-full rendering-pixelated" src={lqip.base64} alt="" />
-        <Img class="relative {cls}" src={sources} {alt} bind:ref on:load={() => loaded = true} on:click {...$$restProps} />
+        <Img class="relative {cls}" src={sources} {alt} bind:loaded bind:ref on:click {...$$restProps} />
         {#if pixels && !loaded}
             <div class="grid absolute inset-0" style:grid-template-rows="repeat({Math.floor(lqip.height)}, minmax(0, 1fr))" style:grid-template-columns="repeat({Math.floor(lqip.width)}, minmax(0, 1fr))">
                 {#each pixels as p, i}

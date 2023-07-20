@@ -39,7 +39,7 @@
 	display: grid;
 	grid-template-areas: 'overlap';
 }
-.overlap > *,
+.overlap > :not(.absolute),
 .overlap-item {
 	grid-area: overlap;
 }

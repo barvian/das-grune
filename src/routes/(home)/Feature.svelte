@@ -34,7 +34,7 @@
         coords?.set({ x: e.clientX - rect.left, y: e.clientY - rect.top })
     }
 }}>
-    <div class="overflow-hidden rounded-t-[100px]">
+    <div class="overflow-hidden rounded-t-[8.375rem]">
         <Img {src} {alt} class="w-full" bind:loaded />
     </div>
     {#if coords}
