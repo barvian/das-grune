@@ -24,7 +24,7 @@
 
 <!-- CSS hover includes arrow even if it's out of bounds of the image, hovering var is only bounds -->
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<a href="#work" class="relative block group" bind:contentRect on:mouseenter={() => hovering = true} on:mouseleave={() => hovering = false} on:mousemove={(e) => {
+<a href="#work" class="relative block group @container" bind:contentRect on:mouseenter={() => hovering = true} on:mouseleave={() => hovering = false} on:mousemove={(e) => {
     const rect = e.currentTarget.getBoundingClientRect()
     if (e.clientX < rect.left || e.clientX > rect.left + rect.width || e.clientY < rect.top || e.clientY > rect.top + rect.height) {
         hovering = false
@@ -34,7 +34,7 @@
         coords?.set({ x: e.clientX - rect.left, y: e.clientY - rect.top })
     }
 }}>
-    <div class="overflow-hidden rounded-t-[8.375rem]">
+    <div class="overflow-hidden rounded-t-[9cqw]">
         <Img {src} {alt} class="w-full" bind:loaded />
     </div>
     {#if coords}

@@ -5,6 +5,7 @@
 	import Globe from '$lib/icons/Globe.svelte'
 	import Twinkle from '$lib/icons/Twinkle.svelte'
 	import Quote from './Quote.svelte'
+	import Project from './Project.svelte'
 	import Image from '$lib/MosaicImage.svelte'
 	import Feature from './Feature.svelte'
 	import ballerina from '$lib/img/ballerina.jpg?run'
@@ -13,6 +14,11 @@
 	import ui from '$lib/img/services/ui.jpg?run'
 	import web from '$lib/img/services/web.jpg?run'
 	import diamond from '$lib/img/quote/diamond.jpg?run'
+	import diamonds from '$lib/img/projects/diamonds.jpg?run'
+	import swirls from '$lib/img/projects/swirls.jpg?run'
+	import swoosh from '$lib/img/projects/swoosh.jpg?run'
+	import rainbow from '$lib/img/projects/rainbow.jpg?run'
+	import waves from '$lib/img/projects/waves.jpg?run'
 	import wave from '$lib/img/quote/wave.jpg?run'
 	import swirl from '$lib/img/quote/swirl.jpg?run'
 	import vid from '$lib/img/vid.jpg?run'
@@ -163,8 +169,8 @@
 	</div>
 </section>
 <section id="work" class="bg-[#171717] py-24">
-	<div class="container">
-		<header use:observe>
+	<div class="container @container">
+		<header class="mb-16" use:observe>
 			<div class="flex justify-between items-center mb-2 gap-[5%]">
 				<h2 class="text-[#c4c4c4] font-bold text-8xl -tracking-[0.025em] uppercase whitespace-nowrap">
 					<span class="inline-block align-baseline slide-up"><span class="inline-block">Best Project</span></span>
@@ -188,17 +194,19 @@
 				{/each}
 			</ul>
 		</header>
-		<ul class="grid grid-cols-3 gap-[2.5%]">
-			<li class="overflow-hidden">
-			</li>
-			<li class="col-span-2 overflow-hidden">
-			</li>
+		<!-- auto rows 1fr sets them to be equal based on the diamonds image (which isn't cropped) -->
+		<ul class="grid grid-cols-3 gap-[2cqw] auto-rows-[1fr]">
+			<Project cropped year="2022" label="Gerades Haus" img={swirls} />
+			<Project class="col-span-2" year="2022" label="Gerades Haus" img={diamonds} />
+			<Project cropped year="2022" label="Gerades Haus" img={waves} />
+			<Project cropped year="2022" label="Gerades Haus" img={swoosh} />
+			<Project cropped year="2022" label="Gerades Haus" img={rainbow} />
 		</ul>
 	</div>
 </section>
 <section id="discuss">
-	<div class="container">
-		<div class="bg-[#d5ff3f] rounded-b-[8.375rem] overflow-hidden px-[5%] py-20" use:observe>
+	<div class="container @container">
+		<div class="bg-[#d5ff3f] rounded-b-[10cqw] overflow-hidden px-[5%] py-20" use:observe>
 			<div class="flex w-full items-center gap-[5%] mb-16 text-[#bce138]">
 				<!-- Left line -->
 				<div class="flex items-center flex-1">

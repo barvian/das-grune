@@ -14,4 +14,4 @@
         if (ref.complete) loaded = true
     })
 </script>
-<SvelteImg {...$$props} bind:ref on:load={() => loaded = true} />
+<SvelteImg {...$$restProps} bind:ref on:load={() => loaded = true} />
