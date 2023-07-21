@@ -13,7 +13,7 @@
 </script>
 
 <li class="{cls} overflow-hidden relative group cursor-not-allowed">
-    <Img src={img} alt="{label} preview" class="{cropped ? 'max-w-none h-full w-auto top-0 left-0' : ''} scale-105 group-hover:scale-100 transition duration-700 ease-out-expo" wrapperClass="{cropped ? '!absolute top-0 left-0' : ''} h-full" />
+    <Img src={img} alt="{label} preview" class="{cropped ? 'max-w-none h-full w-auto top-0 left-0' : ''} bg-[#606060] scale-105 group-hover:scale-100 transition duration-700 ease-out-expo" wrapperClass="{cropped ? '!absolute top-0 left-0' : ''} h-full" />
     <div class="bg-[#202020] opacity-0 group-hover:opacity-[85%] transition duration-300 absolute inset-0" />
     <div class="absolute bottom-4 left-4 right-4">
         <div class="overflow-hidden">

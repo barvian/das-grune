@@ -46,14 +46,15 @@
 
 {#if src?.length}
     <div
-        class="relative {wrapperClass}"
+        class="relative {wrapperClass} {!loaded ? 'rendering-pixelated' : ''}"
+        style:background-image="url({lqip.base64})"
+        style:background-size="100% 100%"
         use:observe
         on:enter|once={() => entered = true}
     >
-        <img class="absolute top-0 left-0 w-full h-full rendering-pixelated" src={lqip.base64} alt="" />
         <Img class="relative {cls}" src={sources} {alt} bind:loaded bind:ref on:click {...$$restProps} />
         {#if pixels && !loaded}
-            <div class="grid absolute inset-0" style:grid-template-rows="repeat({Math.floor(lqip.height)}, minmax(0, 1fr))" style:grid-template-columns="repeat({Math.floor(lqip.width)}, minmax(0, 1fr))">
+            <div class="grid absolute top-0 left-0 w-full h-full" style:grid-template-rows="repeat({Math.floor(lqip.height)}, minmax(0, 1fr))" style:grid-template-columns="repeat({Math.floor(lqip.width)}, minmax(0, 1fr))">
                 {#each pixels as p, i}
                     {@const opt = [{ x: '-100%' }, { x: '100%' }, { y: '-100%' }, { y: '100%'}][Math.floor(Math.random()*4)]}
                     <div class="overflow-hidden"><div out:fly|global={{...opt, duration: 700, delay: i*1.5, opacity: 1, easing: expoOut}} class="w-full h-full" style:background-color="rgba({p[0]},{p[1]},{p[2]},{p[3] / 255})" /></div>
