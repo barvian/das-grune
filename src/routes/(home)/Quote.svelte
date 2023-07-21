@@ -4,7 +4,7 @@
 	import { spring } from "svelte/motion"
 
     let el: HTMLElement
-    let split = false
+    let split = false, entered = false
     onMount(async () => {
         const { default: Splitting } = await import('splitting')
         const directions = ['top', 'bottom', 'left', 'right']
@@ -19,12 +19,13 @@
         handleScroll()
     })
 
-    let progress = spring(0, { stiffness: 0.1, damping: 0.5 })
+    let progress = spring(0, { stiffness: 0.025, damping: 0.35 })
     function handleScroll() {
         if (!split || !el) return
         const rect = el.getBoundingClientRect()
-        const scrolled = (window.innerHeight - (/* scale factor */rect.height * 0.5)) - rect.top
-        const newProgress = scrolled / rect.height
+        const p0 = window.innerHeight - /* scale factor */rect.height * 0.5
+        const p100 = window.innerHeight * 0.5 /* center of viewport */ - rect.height
+        const newProgress = (rect.top - p0) / (p100 - p0)
         if (newProgress > $progress) $progress = newProgress
         if ($progress >= 1) window.removeEventListener('scroll', handleScroll)
     }
@@ -73,7 +74,7 @@ on:leave={() => window.removeEventListener('scroll', handleScroll)}
 
     blockquote :global(.char:hover::before),
     blockquote :global(.char:hover::after) {
-        @apply ease-out-expo duration-700;
+        @apply ease-out-expo duration-[600ms];
     }
 
     @media reader, speech, aural {
