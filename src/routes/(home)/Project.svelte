@@ -1,6 +1,5 @@
 <script lang="ts">
     import Img from "$lib/MosaicImage.svelte"
-	import { observe } from "$lib/actions"
     import type { ComponentProps } from "svelte"
 
     let cls = ''
