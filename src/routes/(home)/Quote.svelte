@@ -31,7 +31,7 @@
 </script>
 
 <svelte:window on:resize={handleScroll} />
-<blockquote class="bg-[#292929] uppercase text-[6.9cqw]/[0.95] p-[10%] font-medium tracking-[0.01em]"
+<blockquote class="bg-[#292929] invisible fonts-loaded:visible uppercase text-[6.9cqw]/[0.95] p-[10%] font-medium tracking-[0.01em]"
 >
     <p class="flex flex-wrap justify-between items-baseline gap-[0.1em]" bind:this={el} class:invisible={!split} style:--progress={$progress} use:observe={0}
     on:enter={() => window.addEventListener('scroll', handleScroll)}
