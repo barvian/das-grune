@@ -61,14 +61,14 @@
 								<!-- <div class="absolute inset-0 bg-[#101010] opacity-0 group-hover:opacity-100 transition duration-300" /> -->
 								<div class="absolute inset-1 rounded-full overflow-hidden bg-[#101010] flex items-center justify-center">
 									<!-- <div class="absolute inset-0 bg-[#d5ff3f] transition duration-300 opacity-0 group-hover:opacity-100" /> -->
-									<div class="overlap items-center justify-center h-2/5 ml-[5%]">
-										<svg class="h-full relative" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<!-- <div class="overlap items-center justify-center h-2/5 ml-[5%]"> -->
+										<svg class="h-2/5 relative ml-[5%]" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#D5FF3F"/>
 										</svg>
 										<!-- <svg class="h-full relative -translate-x-[100%] group-hover:translate-x-0 transition duration-300" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M22.7964 12.4382C24.7148 13.6073 24.7148 16.3926 22.7964 17.5618L4.5612 28.6748C2.56205 29.8931 -1.02334e-07 28.4541 0 26.113L9.7153e-07 3.88699C1.07386e-06 1.54585 2.56206 0.106891 4.56121 1.32522L22.7964 12.4382Z" fill="#101010"/>
 										</svg> -->
-									</div>
+									<!-- </div> -->
 								</div>
 							</div>
 						</div>
