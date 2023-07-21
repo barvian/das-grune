@@ -254,7 +254,7 @@
 		<a href="/" class="text-6xl font-medium">Das Grüne</a>
 		<div class="grid grid-cols-3 uppercase justify-between text-xl mt-20">
 			<span class="cursor-not-allowed text-left">Terms &amp; agreements</span>
-			<span>&copy;2022 Das Gurne All rights reserved</span>
+			<span>&copy;2022 Das Grüne All rights reserved</span>
 			<span class="cursor-not-allowed text-right">Privacy Policy</span>
 		</div>
 	</div>
