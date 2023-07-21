@@ -80,6 +80,9 @@ on:leave={() => window.removeEventListener('scroll', handleScroll)}
     }
 
     @media reader, speech, aural {
+        blockquote :global(.whitespace) {
+            display: inline;
+        }
         blockquote :global(.char) {
             @apply text-[#c4c4c4]
         }
