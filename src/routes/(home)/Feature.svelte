@@ -38,7 +38,7 @@
         <Img {src} {alt} class="w-full" bind:loaded />
     </div>
     {#if coords}
-        <div class="w-48 aspect-square absolute top-0 left-0 overflow-hidden z-10" style:transform="translate(calc({$coords.x}px - 50%), calc({$coords.y}px - 50%))">
+        <div class="w-[18%] hidden @xl:block aspect-square absolute top-0 left-0 overflow-hidden z-10" style:transform="translate(calc({$coords.x}px - 50%), calc({$coords.y}px - 50%))">
             <div class="bg-[#292929] absolute inset-0 rounded-full {!loaded ? 'translate-y-full' : ''} transition-transform duration-1000 ease-out-expo">
                 <div class="bg-[#101010] absolute inset-0 rounded-full group-hover:opacity-100 opacity-0 transition duration-300" />
                 <div class="bg-[#101010] absolute inset-2 rounded-full group-hover:scale-[97.5%] transition overflow-hidden">

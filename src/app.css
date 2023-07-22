@@ -16,7 +16,7 @@
 }
 
 .container {
-	@apply mx-auto w-full max-w-[theme(screens.xl)] px-5;
+	@apply mx-auto w-full max-w-[theme(screens.xl)] px-[max(theme(padding.5),5vw)];
 }
 
 .title {
@@ -28,7 +28,7 @@
 }
 
 .slide-up > :only-child {
-	@apply translate-y-full fonts-loaded:entered:translate-y-0 transition-transform duration-1000 ease-out-expo;
+	@apply translate-y-full entered-fonts-loaded:translate-y-0 transition-transform duration-1000 ease-out-expo;
 }
 
 :is([class*='entered:']) {

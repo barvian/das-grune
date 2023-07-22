@@ -34,13 +34,13 @@
 </svelte:head>
 
 <!-- TODO: tailwind vars for common colors -->
-<header class="bg-[#d5ff3f] pt-10">
-	<nav class="container flex items-center gap-[8%] mb-20" use:observe>
+<header class="bg-[#d5ff3f] pt-[clamp(theme(padding.5),4vw,theme(padding.10))]">
+	<nav class="container flex items-center gap-[8%] mb-20 @container" use:observe>
 		<a href="/" class="slide-up font-medium text-2xl mr-auto"><span class="inline-block">Das Grüne</span></a>
-		<span class="cursor-not-allowed text-xl slide-up"><span class="inline-block delay-[100ms]">About Us</span></span>
-		<span class="cursor-not-allowed text-xl slide-up"><span class="inline-block delay-[150ms]">Project</span></span>
-		<span class="cursor-not-allowed text-xl slide-up"><span class="inline-block delay-[200ms]">Services</span></span>
-		<span class="cursor-not-allowed text-xl slide-up"><span class="inline-block delay-[250ms]">Let's Talk</span></span>
+		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"><span class="inline-block delay-[100ms]">About Us</span></span>
+		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"><span class="inline-block delay-[150ms]">Project</span></span>
+		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"><span class="inline-block delay-[200ms]">Services</span></span>
+		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"><span class="inline-block delay-[250ms]">Let's Talk</span></span>
 	</nav>
 	<div class="container @container" use:observe>
 		<div class="flex items-center justify-start gap-[1.1%] pl-[0.5%] mb-[1%]">
@@ -48,11 +48,11 @@
 			<div aria-hidden class="w-[2%] slide-up"><div class="w-full rounded-full aspect-square bg-current delay-[50ms]" /></div>
 		</div>
 		<div class="flex gap-[3%]">
-			<h1 class="font-bold text-[15cqw]/[0.75] uppercase">
+			<h1 class="font-bold text-[22.5cqw]/[0.75] @3xl:text-[15cqw]/[0.75] uppercase">
 				<span class="slide-up inline-block"><span class="inline-block">Digitize</span></span>
 				<span class="slide-up inline-block"><span class="inline-block">ideas</span></span>
 			</h1>
-			<div class="w-full relative flex flex-col gap-[8%] justify-start items-center">
+			<div class="w-full relative hidden @3xl:flex flex-col gap-[8%] justify-start items-center">
 				<div class="slide-up delay-[100ms]">
 					<div class="rounded-full overflow-hidden relative cursor-not-allowed group border-4 border-[#bbe132]">
 						<Image src={vid} alt="Teaser video" />
@@ -95,12 +95,12 @@
 				<Globe class="w-5" />
 				World Class Agency
 			</Tag>
-			<div class="flex items-center flex-1">
-				<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 delay-[250ms] ease-out-expo" />
-				<div class="bg-[#bce138] h-0.5 flex-1 origin-left scale-x-0 fonts-loaded:entered:scale-x-100 transition-transform duration-1000 delay-[300ms]" />
-				<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 delay-[1350ms] ease-out-expo" />
+			<div class="hidden @3xl:flex items-center flex-1">
+				<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 delay-[250ms] ease-out-expo" />
+				<div class="bg-[#bce138] h-0.5 flex-1 origin-left scale-x-0 entered-fonts-loaded:scale-x-100 transition-transform duration-1000 delay-[300ms]" />
+				<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 delay-[1350ms] ease-out-expo" />
 			</div>
-			<svg class="h-6 text-[#bce138]" viewBox="0 0 58 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg class="hidden @3xl:block h-6 text-[#bce138]" viewBox="0 0 58 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<circle cx="12" cy="12" r="11.25" class="transition-[stroke-dashoffset] entered:[stroke-dashoffset:0] duration-1000 delay-[1000ms]" stroke-dasharray="70" stroke-dashoffset="-70" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5"/>
 				<circle cx="29" cy="12" r="11.25" class="transition-[stroke-dashoffset] entered:[stroke-dashoffset:0] duration-1000 delay-[1250ms]" stroke-dasharray="70" stroke-dashoffset="-70" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5"/>
 				<circle cx="46" cy="12" r="11.25" class="transition-[stroke-dashoffset] entered:[stroke-dashoffset:0] duration-1000 delay-[1500ms]" stroke-dasharray="70" stroke-dashoffset="-70" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5"/>
@@ -210,18 +210,18 @@
 			<div class="flex w-full items-center gap-[5%] mb-16 text-[#bce138]">
 				<!-- Left line -->
 				<div class="flex items-center flex-1">
-					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 delay-[850ms] ease-out-expo" />
-					<div class="bg-[#bce138] h-0.5 flex-1 origin-right scale-x-0 fonts-loaded:entered:scale-x-100 transition-transform duration-500 delay-[300ms]" />
-					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 ease-out-expo" />
+					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 delay-[850ms] ease-out-expo" />
+					<div class="bg-[#bce138] h-0.5 flex-1 origin-right scale-x-0 entered-fonts-loaded:scale-x-100 transition-transform duration-500 delay-[300ms]" />
+					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 ease-out-expo" />
 				</div>
 				<div class="slide-up relative -top-3"><Twinkle class="h-7 delay-[50ms]" /></div>
 				<div class="slide-up relative -top-3"><Twinkle class="h-7" /></div>
 				<div class="slide-up relative -top-3"><Twinkle class="h-7 delay-[50ms]" /></div>
 				<!-- Right line -->
 				<div class="flex items-center flex-1">
-					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 ease-out-expo" />
-					<div class="bg-[#bce138] h-0.5 flex-1 origin-left scale-x-0 fonts-loaded:entered:scale-x-100 transition-transform duration-500 delay-[300ms]" />
-					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 fonts-loaded:entered:scale-100 transition-transform duration-300 delay-[850ms] ease-out-expo" />
+					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full  scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 ease-out-expo" />
+					<div class="bg-[#bce138] h-0.5 flex-1 origin-left scale-x-0 entered-fonts-loaded:scale-x-100 transition-transform duration-500 delay-[300ms]" />
+					<div class="bg-[#bce138] w-1.5 aspect-square rounded-full scale-0 entered-fonts-loaded:scale-100 transition-transform duration-300 delay-[850ms] ease-out-expo" />
 				</div>
 			</div>
 			<h2 class="uppercase font-bold text-7xl lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up">

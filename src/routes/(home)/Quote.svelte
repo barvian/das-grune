@@ -32,9 +32,9 @@
 </script>
 
 <svelte:window on:resize={handleScroll} />
-<blockquote class="bg-[#292929] invisible fonts-loaded:visible uppercase text-[6.9cqw]/[0.95] p-[10%] font-medium tracking-[0.01em]"
+<blockquote class="bg-[#292929] text-[#c4c4c4] invisible fonts-loaded:visible uppercase text-[8.5cqw]/[0.95] @xl:text-[6.9cqw]/[0.95] px-[7.5%] py-[12%] @xl:p-[10%] font-medium tracking-[0.01em]"
 >
-    <p class="flex flex-wrap justify-between items-baseline gap-[0.1em]" bind:this={el} class:invisible={!split} style:--progress={$progress} use:observe={0}
+    <p class="flex flex-wrap justify-between items-baseline gap-[0.1em] no-js:[--progress:1]" bind:this={el} class:invisible={!split} style:--progress={$progress} use:observe={0}
     on:enter={() => window.addEventListener('scroll', handleScroll)}
 on:leave={() => window.removeEventListener('scroll', handleScroll)}
     >
