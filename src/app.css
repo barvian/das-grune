@@ -16,7 +16,7 @@
 }
 
 .container {
-	@apply mx-auto w-full max-w-[theme(screens.xl)] px-[max(theme(padding.5),5vw)];
+	@apply mx-auto w-full max-w-[theme(screens.xl)] px-[max(theme(padding.5),5vw)] xl:px-5;
 }
 
 .title {
