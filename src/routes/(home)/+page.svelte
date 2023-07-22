@@ -348,7 +348,7 @@
 <section id="discuss">
 	<div class="container @container">
 		<div
-			class="bg-lime-300 rounded-b-[10cqw] overflow-hidden px-[max(theme(spacing.5),5%)] py-20"
+			class="bg-lime-200 rounded-b-[10cqw] overflow-hidden px-[max(theme(spacing.5),5%)] py-20"
 			use:observe
 		>
 			<div class="hidden @3xl:flex w-full items-center gap-[5%] mb-16 text-lime-300">
@@ -383,7 +383,7 @@
 			<h2
 				class="uppercase font-bold text-7xl/[1] lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up"
 			>
-				<span class="block">Let's discuss your ideas</span>
+				<span class="block">Let's discuss<br/>your ideas</span>
 			</h2>
 			<div class="flex flex-wrap justify-center w-full gap-5 mt-16">
 				<div class="slide-up">
