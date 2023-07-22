@@ -341,7 +341,7 @@
 			<Project class="@3xl:col-span-2" year="2022" label="Gerades Haus" img={diamonds} />
 			<Project cropped year="2022" label="Gerades Haus" img={waves} />
 			<Project cropped year="2022" label="Gerades Haus" img={swoosh} />
-			<Project cropped year="2022" label="Gerades Haus" img={rainbow} />
+			<Project class="rounded-br-[8cqw]" cropped year="2022" label="Gerades Haus" img={rainbow} />
 		</ul>
 	</div>
 </section>
