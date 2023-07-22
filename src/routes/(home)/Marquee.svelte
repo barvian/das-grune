@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { observe } from "$lib/actions"
     import { spring } from 'svelte/motion'
 
     let x = spring(0, { stiffness: 0.1, damping: 0.5 })
@@ -8,7 +7,7 @@
 		if (!wrapper) return
 		$x = window.innerHeight - wrapper.getBoundingClientRect().top
 	}
-	handleScroll()
+	$: wrapper && handleScroll()	
 </script>
 
 <svelte:window on:scroll={handleScroll} on:resize={handleScroll} />
