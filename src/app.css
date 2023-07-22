@@ -23,12 +23,21 @@
 	@apply font-black tracking-tighter lowercase;
 }
 
-.slide-up {
+.slide-up, .slide-right {
 	@apply overflow-hidden;
 }
 
+.slide-up > :only-child,
+.slide-right > :only-child {
+	@apply transition-transform duration-1000 ease-out-expo;
+}
+
 .slide-up > :only-child {
-	@apply translate-y-full entered-fonts-loaded:translate-y-0 transition-transform duration-1000 ease-out-expo;
+	@apply translate-y-full entered-fonts-loaded:translate-y-0
+}
+
+.slide-right > :only-child {
+	@apply -translate-x-full entered-fonts-loaded:translate-x-0
 }
 
 :is([class*='entered:']) {

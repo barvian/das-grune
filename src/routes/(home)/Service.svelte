@@ -8,10 +8,10 @@
     let loaded = false
 </script>
 
-<li class="@container cursor-not-allowed flex items-stretch w-full relative text-6xl group border-b border-[#2b2b2b]" use:observe>
+<li class="@container cursor-not-allowed flex items-stretch w-full relative text-6xl/[1.05] group border-b border-[#2b2b2b]" use:observe>
     <!-- Hover BG -->
     <div class="absolute inset-0 bg-[#292929] opacity-0 group-hover:opacity-100 transition duration-300" />
-    <div class="flex p-[4.5cqw] flex-1 flex-shrink-0 items-end whitespace-nowrap">
+    <div class="flex px-[4.5cqw] py-[max(4.5cqw,1.75rem)] flex-1 flex-shrink-0 items-end whitespace-nowrap">
         <div class="slide-up">
             <div class="inline-overlap overflow-hidden font-medium">
                 <span class="inline-block text-[#606060] transition duration-500 ease-out-expo group-hover:-translate-y-full">{label}</span>
@@ -19,10 +19,10 @@
             </div>
         </div>
         <span class="block overflow-hidden relative -top-[0.2em] ml-[2%]" aria-hidden>
-            <span class="block h-4 rounded-full aspect-square bg-[#d5ff3f] group-hover:translate-y-0 translate-y-[101%] group-hover:delay-[50ms] transition duration-500 ease-out-expo">.</span>
+            <span class="block h-[0.25em] rounded-full aspect-square bg-[#d5ff3f] group-hover:translate-y-0 translate-y-[101%] group-hover:delay-[50ms] transition duration-500 ease-out-expo">.</span>
         </span>
     </div>
-    <div class="relative">
+    <div class="relative hidden @lg:block">
         <div class="absolute bottom-0 aspect-square h-[175%] right-0 pointer-events-none">
             <div class="overflow-hidden absolute inset-0 translate-x-[3%] translate-y-[3%]">
                 <div class="h-full w-full bg-[#d5ff3f] rounded-t-[15%] group-hover:translate-y-0 group-hover:delay-[50ms] translate-y-[101%] transition duration-700 ease-out-expo" />
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="slide-up pr-[3%] pl-[4%]">
+    <div class="slide-up pr-[3%] pl-[4%] hidden @md:block">
         <div class="delay-[50ms] h-full overlap items-center justify-items-center relative">
             <svg class="h-[4.25cqw]" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M46.9644 5.5H4.21734V0.5H55.4999V51.7826H50.4999V9.03554L3.76771 55.7678L0.232178 52.2322L46.9644 5.5Z" fill="#5f5f5f" />

@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-min slide-up">
-    <div class="flex whitespace-nowrap items-center text-xl rounded-full border px-5 py-2.5 gap-2.5 {cls}" {style}>
+    <div class="flex whitespace-nowrap items-center text-xl rounded-full border px-[1em] py-[0.5em] gap-[0.5em] {cls}" {style}>
         <slot />
     </div>
 </div>
