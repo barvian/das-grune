@@ -3,9 +3,9 @@
 	src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2'),
 		url('/fonts/ClashDisplay-Variable.woff') format('woff'),
 		url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
-		font-weight: 200 700;
-		/*font-display: swap;*/
-		font-style: normal;
+	font-weight: 200 700;
+	/*font-display: swap;*/
+	font-style: normal;
 }
 
 @tailwind base;
@@ -23,7 +23,8 @@
 	@apply font-black tracking-tighter lowercase;
 }
 
-.slide-up, .slide-right {
+.slide-up,
+.slide-right {
 	@apply overflow-hidden;
 }
 
@@ -33,11 +34,11 @@
 }
 
 .slide-up > :only-child {
-	@apply translate-y-full entered-fonts-loaded:translate-y-0
+	@apply translate-y-full entered-fonts-loaded:translate-y-0;
 }
 
 .slide-right > :only-child {
-	@apply -translate-x-full entered-fonts-loaded:translate-x-0
+	@apply -translate-x-full entered-fonts-loaded:translate-x-0;
 }
 
 :is([class*='entered:']) {

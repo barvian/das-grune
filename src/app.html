@@ -8,7 +8,9 @@
 		<meta name="viewport" content="width=device-width" />
 		<script>
 			document.documentElement.setAttribute('data-js', '')
-			document.fonts.ready.then(() => document.documentElement.setAttribute('data-fonts-loaded', ''))
+			document.fonts.ready.then(() =>
+				document.documentElement.setAttribute('data-fonts-loaded', '')
+			)
 		</script>
 		%sveltekit.head%
 	</head>
