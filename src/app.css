@@ -12,7 +12,7 @@
 @tailwind components;
 
 :root {
-	@apply bg-[#171717] antialiased overflow-x-hidden scroll-smooth;
+	@apply bg-gray-900 antialiased overflow-x-hidden scroll-smooth;
 }
 
 .container {

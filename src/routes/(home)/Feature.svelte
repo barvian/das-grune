@@ -39,19 +39,19 @@
     </div>
     {#if coords}
         <div class="w-[18%] hidden @xl:block aspect-square absolute top-0 left-0 overflow-hidden z-10" style:transform="translate(calc({$coords.x}px - 50%), calc({$coords.y}px - 50%))">
-            <div class="bg-[#292929] absolute inset-0 rounded-full {!loaded ? 'translate-y-full' : ''} transition-transform duration-1000 ease-out-expo">
-                <div class="bg-[#101010] absolute inset-0 rounded-full group-hover:opacity-100 opacity-0 transition duration-300" />
-                <div class="bg-[#101010] absolute inset-2 rounded-full group-hover:scale-[97.5%] transition overflow-hidden">
-                    <div class="opacity-0 group-hover:opacity-100 bg-[#D5FF3F] transition duration-300 absolute inset-0" />
+            <div class="bg-gray-800 absolute inset-0 rounded-full {!loaded ? 'translate-y-full' : ''} transition-transform duration-1000 ease-out-expo">
+                <div class="bg-gray-900 absolute inset-0 rounded-full group-hover:opacity-100 opacity-0 transition duration-300" />
+                <div class="bg-gray-900 absolute inset-2 rounded-full group-hover:scale-[97.5%] transition overflow-hidden">
+                    <div class="opacity-0 group-hover:opacity-100 bg-lime-300 transition duration-300 absolute inset-0" />
                     <div class="-rotate-45 w-[200%] origin-[75%_50%] right-0 absolute h-full top-0">
                         <div class="w-1/2 absolute right-0 top-0 h-full group-hover:translate-x-full transition duration-300 flex items-center justify-center">
                             <svg class="h-1/2" viewBox="0 0 88 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M70.5446 38.25L39.3357 7.04109L45.6997 0.67713L87.7725 42.75L45.6997 84.8228L39.3357 78.4589L70.5446 47.25L0.0912681 47.25L0.0912648 38.25H70.5446Z" fill="#D5FF3F"/>
+                                <path class="fill-lime-300" fill-rule="evenodd" clip-rule="evenodd" d="M70.5446 38.25L39.3357 7.04109L45.6997 0.67713L87.7725 42.75L45.6997 84.8228L39.3357 78.4589L70.5446 47.25L0.0912681 47.25L0.0912648 38.25H70.5446Z"/>
                             </svg>   
                         </div>
                         <div class="w-1/2 absolute left-0 top-0 h-full group-hover:translate-x-full transition duration-300 flex items-center justify-center">
                             <svg class="h-1/2" viewBox="0 0 88 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M70.5446 38.25L39.3357 7.04109L45.6997 0.67713L87.7725 42.75L45.6997 84.8228L39.3357 78.4589L70.5446 47.25L0.0912681 47.25L0.0912648 38.25H70.5446Z" fill="#101010"/>
+                                <path class="fill-gray-900" fill-rule="evenodd" clip-rule="evenodd" d="M70.5446 38.25L39.3357 7.04109L45.6997 0.67713L87.7725 42.75L45.6997 84.8228L39.3357 78.4589L70.5446 47.25L0.0912681 47.25L0.0912648 38.25H70.5446Z" />
                             </svg>   
                         </div>   
                     </div>
