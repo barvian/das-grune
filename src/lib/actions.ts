@@ -25,11 +25,12 @@ export const observe = ((node, threshold = 0.25) => {
 	node.addEventListener(
 		'enter',
 		() => {
-			node.classList.add('entered', 'entering')
+			node.setAttribute('data-observe-entered', '')
+			node.setAttribute('data-observe-entering', '')
 			node.addEventListener(
 				'transitionend',
 				() => {
-					node.classList.remove('entering')
+					node.removeAttribute('data-observe-entering')
 				},
 				{ once: true }
 			)
@@ -42,4 +43,4 @@ export const observe = ((node, threshold = 0.25) => {
 			observer.unobserve(node)
 		}
 	}
-}) satisfies Action
+}) satisfies Action<HTMLElement, number>

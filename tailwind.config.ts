@@ -74,8 +74,8 @@ export default {
 		plugin(({ addVariant }) => {
 			addVariant('js', '[data-js]:root &')
 			addVariant('fonts-loaded', ['[data-no-js]:root &', '[data-js][data-fonts-loaded]:root &'])
-			addVariant('entered', ['[data-no-js]:root &', '&.entered', '.entered &'])
-			addVariant('entering', ['[data-no-js]:root &', '&.entering', '.entering &'])
+			addVariant('entered', ['[data-no-js]:root &', '&[data-observe-entered]', '[data-observe-entered] &'])
+			addVariant('entering', ['[data-no-js]:root &', '&[data-observe-entering]', '[data-observe-entering] &'])
 		})
 	]
 } satisfies Config
