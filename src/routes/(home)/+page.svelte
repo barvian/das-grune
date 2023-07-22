@@ -51,6 +51,7 @@
 		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"
 			><span class="inline-block delay-[250ms]">Let's Talk</span></span
 		>
+		<!-- Hamburger -->
 		<div class="cursor-not-allowed @3xl:hidden space-y-1.5">
 			<div class="slide-right"><div class="h-[2px] delay-[100ms] bg-current w-[30px]" /></div>
 			<div class="slide-right"><div class="h-[2px] delay-[150ms] bg-current w-[30px]" /></div>
@@ -72,9 +73,9 @@
 				<span class="slide-up inline-block"><span class="inline-block">ideas</span></span>
 			</h1>
 			<div class="w-full relative flex flex-col gap-[8%] justify-start items-center">
-				<div class="slide-up delay-[100ms] hidden @3xl:block">
+				<div class="slide-up hidden @3xl:block">
 					<div
-						class="rounded-full overflow-hidden relative cursor-not-allowed group border-4 border-lime-300"
+						class="rounded-full overflow-hidden delay-[100ms] relative cursor-not-allowed group border-4 border-lime-300"
 					>
 						<Image src={vid} alt="Teaser video" />
 						<div
@@ -108,14 +109,14 @@
 					</div>
 				</div>
 				<div class="hidden @3xl:flex gap-[20%] w-full justify-center items-center text-lime-300">
-					<div class="slide-up"><Twinkle class="h-7" /></div>
-					<div class="slide-up"><Twinkle class="h-7 delay-[50ms]" /></div>
-					<div class="slide-up"><Twinkle class="h-7 delay-[100ms]" /></div>
+					<div class="slide-up"><Twinkle class="h-7 delay-[150ms]" /></div>
+					<div class="slide-up"><Twinkle class="h-7 delay-[200ms]" /></div>
+					<div class="slide-up"><Twinkle class="h-7 delay-[250ms]" /></div>
 				</div>
 				<div
 					class="@3xl:absolute bottom-[3.5%] right-0 @3xl:w-[150%] @3xl:text-[2.25cqw]/[1.45] @5xl:text-2xl/[1.45] @5xl:w-[31rem] text-2xl/[1.45] slide-up"
 				>
-					<p class="delay-[50ms]">
+					<p class="delay-[200ms]">
 						The art of visual communication, creatively impacting the world around us&mdash;one good
 						design at a time, design like you mean it!
 					</p>
@@ -123,11 +124,11 @@
 			</div>
 		</div>
 		<div class="flex items-center flex-wrap @3xl:flex-nowrap justify-start gap-5 mt-10">
-			<Tag class="delay-[50ms]">
+			<Tag class="delay-[250ms]">
 				<Crown class="w-5 flex-shrink-0" />
 				2022 Best Agency
 			</Tag>
-			<Tag class="delay-[100ms]">
+			<Tag class="delay-[300ms]">
 				<Globe class="w-5 flex-shrink-0" />
 				World Class Agency
 			</Tag>
