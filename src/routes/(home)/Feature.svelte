@@ -66,7 +66,7 @@
 					class="bg-gray-900 absolute inset-2 rounded-full group-hover:scale-[97.5%] transition overflow-hidden"
 				>
 					<div
-						class="opacity-0 group-hover:opacity-100 bg-lime-300 transition duration-300 absolute inset-0"
+						class="opacity-0 group-hover:opacity-100 bg-lime-200 transition duration-300 absolute inset-0"
 					/>
 					<div class="-rotate-45 w-[200%] origin-[75%_50%] right-0 absolute h-full top-0">
 						<div
@@ -74,7 +74,7 @@
 						>
 							<svg class="h-1/2" viewBox="0 0 88 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
-									class="fill-lime-300"
+									class="fill-lime-200"
 									fill-rule="evenodd"
 									clip-rule="evenodd"
 									d="M70.5446 38.25L39.3357 7.04109L45.6997 0.67713L87.7725 42.75L45.6997 84.8228L39.3357 78.4589L70.5446 47.25L0.0912681 47.25L0.0912648 38.25H70.5446Z"

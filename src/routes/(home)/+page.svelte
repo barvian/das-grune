@@ -205,7 +205,7 @@
 							>Our <span class="whitespace-nowrap"
 								>services<span class="inline-block align-baseline slide-up pl-[0.2em]"
 									><span
-										class="bg-lime-300 block delay-[300ms] aspect-square w-[0.2em] rounded-full"
+										class="bg-lime-200 block delay-[300ms] aspect-square w-[0.2em] rounded-full"
 										aria-hidden
 									/></span
 								></span
@@ -307,7 +307,7 @@
 							>Best <span class="whitespace-nowrap"
 								>Project<span class="inline-block align-baseline slide-up pl-[0.2em]"
 									><span
-										class="bg-lime-300 block delay-[300ms] aspect-square w-[0.2em] rounded-full"
+										class="bg-lime-200 block delay-[300ms] aspect-square w-[0.2em] rounded-full"
 										aria-hidden
 									/></span
 								></span
@@ -389,7 +389,7 @@
 			<div class="flex flex-wrap justify-center w-full gap-5 mt-16">
 				<div class="slide-up">
 					<div
-						class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-300 group"
+						class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-200 group"
 					>
 						<div
 							class="group-hover:opacity-100 opacity-0 bg-gray-800 absolute inset-0 transition duration-150"
@@ -427,7 +427,7 @@
 	</div>
 </section>
 <footer class="bg-gray-900 sticky bottom-0 -z-10">
-	<div class="container text-center text-lime-300 pb-6 pt-20">
+	<div class="container text-center text-lime-200 pb-6 pt-20">
 		<a href="/" class="text-6xl font-medium">Das Grüne</a>
 		<div
 			class="flex lg:grid lg:grid-cols-[1fr_2fr_1fr] lg:whitespace-nowrap uppercase justify-between text-xl mt-20"
