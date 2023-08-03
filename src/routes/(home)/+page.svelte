@@ -68,6 +68,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col gap-11 @3xl:gap-[3%] @3xl:flex-row">
+			<!-- TODO: this isn't accessible because it doesn't zoom -->
 			<h1 class="font-bold text-[22.5cqw]/[0.75] @3xl:text-[15cqw]/[0.75] uppercase">
 				<span class="slide-up inline-block"><span class="inline-block">Digitize</span></span>
 				<span class="slide-up inline-block"><span class="inline-block">ideas</span></span>
