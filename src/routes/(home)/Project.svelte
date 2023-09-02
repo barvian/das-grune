@@ -26,14 +26,14 @@
 	<div class="absolute bottom-4 left-4 right-4">
 		<div class="overflow-hidden">
 			<div
-				class="translate-y-full fonts-loaded:group-hover:translate-y-0 text-2xl text-gray-300 font-medium transition ease-out-expo duration-700 group-hover:delay-100"
+				class="translate-y-full fonts-loaded:group-hover:translate-y-0 ~text-lg/2xl text-gray-300 font-medium transition ease-out-expo duration-700 group-hover:delay-100"
 			>
 				{year}
 			</div>
 		</div>
 		<div class="overflow-hidden">
 			<div
-				class="translate-y-full fonts-loaded:group-hover:translate-y-0 text-6xl/[1.05] font-medium tracking-[0.02em] text-gray-350 transition ease-out-expo duration-700"
+				class="translate-y-full fonts-loaded:group-hover:translate-y-0 ~text-4xl/6xl leading-[1.05] font-medium tracking-[0.02em] text-gray-350 transition ease-out-expo duration-700"
 			>
 				{label}
 			</div>

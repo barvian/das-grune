@@ -34,21 +34,21 @@
 </svelte:head>
 
 <!-- TODO: tailwind vars for common colors -->
-<header class="bg-lime-200 pt-[clamp(theme(padding.5),4vw,theme(padding.10))]">
+<header class="bg-lime-200 ~pt-5/10">
 	<nav class="container flex items-center gap-[8%] mb-20 @container" use:observe>
-		<a href="/" class="slide-up font-medium text-2xl mr-auto"
+		<a href="/" class="slide-up font-medium ~text-lg/2xl mr-auto"
 			><span class="inline-block">Das Grüne</span></a
 		>
-		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"
+		<span class="cursor-not-allowed ~text-lg/xl slide-up @3xl:inline-block hidden"
 			><span class="inline-block delay-[100ms]">About Us</span></span
 		>
-		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"
+		<span class="cursor-not-allowed ~text-lg/xl slide-up @3xl:inline-block hidden"
 			><span class="inline-block delay-[150ms]">Project</span></span
 		>
-		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"
+		<span class="cursor-not-allowed ~text-lg/xl slide-up @3xl:inline-block hidden"
 			><span class="inline-block delay-[200ms]">Services</span></span
 		>
-		<span class="cursor-not-allowed text-xl slide-up @3xl:inline-block hidden"
+		<span class="cursor-not-allowed ~text-lg/xl slide-up @3xl:inline-block hidden"
 			><span class="inline-block delay-[250ms]">Let's Talk</span></span
 		>
 		<!-- Hamburger -->
@@ -115,7 +115,7 @@
 					<div class="slide-up"><Twinkle class="h-7 delay-[250ms]" /></div>
 				</div>
 				<div
-					class="@3xl:absolute bottom-[3.5%] right-0 @3xl:w-[150%] @3xl:text-[2.25cqw]/[1.45] @5xl:text-2xl/[1.45] @5xl:w-[31rem] text-2xl/[1.45] slide-up"
+					class="~text-lg/2xl leading-[1.45] @3xl:~@-3xl/5xl @3xl:~text-lg/2xl @3xl:~w-[24rem]/[31rem] @3xl:absolute bottom-[3.5%] right-0 slide-up"
 				>
 					<p class="delay-[200ms]">
 						The art of visual communication, creatively impacting the world around us&mdash;one good
@@ -199,7 +199,7 @@
 		>
 			<div>
 				<h2
-					class="text-gray-350 font-bold text-7xl/[1] -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
+					class="text-gray-350 font-bold ~text-3xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
 				>
 					<span class="inline-block align-baseline slide-up"
 						><span class="inline-block"
@@ -215,7 +215,7 @@
 					>
 				</h2>
 				<div class="slide-up">
-					<p class="text-xl text-gray-600 max-w-[45ch] delay-[50ms]">
+					<p class="~text-lg/xl text-gray-600 max-w-[45ch] delay-[50ms]">
 						Every one of us loves something different. So, explore the world through the lens of our
 						visual capabilities, and find what you love
 					</p>
@@ -301,7 +301,7 @@
 		<header class="mb-16" use:observe>
 			<div class="flex flex-col @3xl:flex-row @3xl:justify-between @3xl:items-center mb-2 gap-[5%]">
 				<h2
-					class="text-gray-350 font-bold text-7xl/[1] -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
+					class="text-gray-350 font-bold ~text-3xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
 				>
 					<span class="inline-block align-baseline slide-up"
 						><span class="inline-block"
@@ -317,7 +317,7 @@
 					>
 				</h2>
 				<div class="slide-up">
-					<p class="text-xl text-gray-600 max-w-[45ch] delay-[50ms]">
+					<p class="~text-lg/xl text-gray-600 max-w-[45ch] delay-[50ms]">
 						Creative fuels design, design fuels creativity, be here for more, are you in love with a
 						creative?
 					</p>
@@ -383,14 +383,14 @@
 				</div>
 			</div>
 			<h2
-				class="uppercase font-bold text-7xl/[1] lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up"
+				class="uppercase font-bold ~text-3xl/8xl leading-none lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up"
 			>
 				<span class="block">Let's discuss<br/>your ideas</span>
 			</h2>
 			<div class="flex flex-wrap justify-center w-full gap-5 mt-16">
 				<div class="slide-up">
 					<div
-						class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-200 group"
+						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl/none font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-200 group"
 					>
 						<div
 							class="group-hover:opacity-100 opacity-0 bg-gray-800 absolute inset-0 transition duration-150"
@@ -409,7 +409,7 @@
 				</div>
 				<div class="slide-up">
 					<div
-						class="cursor-not-allowed block relative rounded-full overflow-hidden text-2xl/none font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap group"
+						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl/none font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap group"
 					>
 						<div class="overlap overflow-hidden text-center">
 							<span
@@ -429,9 +429,9 @@
 </section>
 <footer class="bg-gray-900 sticky bottom-0 -z-10">
 	<div class="container text-center text-lime-200 pb-6 pt-20">
-		<a href="/" class="text-6xl font-medium">Das Grüne</a>
+		<a href="/" class="~text-4xl/6xl font-medium">Das Grüne</a>
 		<div
-			class="flex lg:grid lg:grid-cols-[1fr_2fr_1fr] lg:whitespace-nowrap uppercase justify-between text-xl mt-20"
+			class="flex lg:grid lg:grid-cols-[1fr_2fr_1fr] lg:whitespace-nowrap uppercase justify-between ~text-lg/xl mt-20"
 		>
 			<span class="cursor-not-allowed text-left">Terms &amp; agreements</span>
 			<span class="max-lg:hidden">&copy;2022 Das Grüne All rights reserved</span>

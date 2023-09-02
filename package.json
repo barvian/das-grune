@@ -12,6 +12,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@fluidstyle/tailwindcss-plugin": "^0.0.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.22.0",
 		"@tailwindcss/container-queries": "^0.1.1",

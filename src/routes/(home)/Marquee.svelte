@@ -14,7 +14,7 @@
 <a
 	bind:this={wrapper}
 	href="/#discuss"
-	class="bg-gray-900 block group relative before:bg-gray-800 py-[1em] text-[clamp(1.75rem,1.08rem+3.33vw,3.75rem)] before:opacity-0 before:inset-0 before:absolute hover:before:opacity-100 before:transition overflow-hidden"
+	class="bg-gray-900 block group relative before:bg-gray-800 py-[1em] ~text-[1.75rem]/6xl before:opacity-0 before:inset-0 before:absolute hover:before:opacity-100 before:transition overflow-hidden"
 >
 	<div
 		class="bg-discuss bg-repeat-x w-[calc(100%+100vh+3em)] bg-[5%_center] bg-[length:auto_1em] h-[1em] will-change-transform"

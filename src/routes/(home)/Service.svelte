@@ -9,7 +9,7 @@
 </script>
 
 <li
-	class="@container cursor-not-allowed flex items-stretch w-full relative text-6xl/[1.05] group border-b border-gray-800"
+	class="@container cursor-not-allowed flex items-stretch w-full relative ~text-4xl/6xl leading-[1.05] group border-b border-gray-800"
 	use:observe
 >
 	<!-- Hover BG -->
