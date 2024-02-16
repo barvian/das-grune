@@ -3,13 +3,13 @@ import plugin from 'tailwindcss/plugin'
 import clipPathPlugin from 'tailwind-clip-path'
 import imageRenderingPlugin from 'tailwindcss-image-rendering'
 import containerQueryPlugin from '@tailwindcss/container-queries'
-import { buildFluidExtract, fluidCorePlugins, defaultScreensInRems } from '@fluidstyle/tailwindcss-plugin'
-const { '2xl': _, ...screens } = defaultScreensInRems
+import { fluidExtractor, fluidCorePlugins, defaultThemeFontSizeInRems, defaultThemeScreensInRems } from 'fluid-tailwind'
+const { '2xl': _, ...screens } = defaultThemeScreensInRems
 
 export default {
 	content: {
 		files: ['./src/**/*.{html,js,svelte,ts}'],
-		extract: buildFluidExtract()
+		extract: fluidExtractor()
 	},
 	theme: {
 		colors: {
@@ -27,9 +27,10 @@ export default {
 				900: '#171717'
 			}
 		},
+		fontSize: defaultThemeFontSizeInRems,
 		screens: {
-			...screens,
-			xs: '30rem'
+			xs: '30rem',
+			...screens
 		},
 		extend: {
 			borderWidth: {
@@ -42,7 +43,8 @@ export default {
 				sans: ['Clash Display', 'sans-serif']
 			},
 			fontSize: {
-				'3xl': '3.25rem',
+				'2.5xl': ['1.75rem', '2rem'],
+				'5xl': '3.25rem',
 				'8xl': '5.375rem'
 			},
 			backgroundImage: {

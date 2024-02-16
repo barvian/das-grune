@@ -74,7 +74,7 @@
 		color: transparent;
 		/* This makes sense if you think about it as a timeline of animations, with the progress as the playhead */
 		--percentage: clamp(0, var(--progress) / ((var(--char-index) + 1) / var(--char-total)), 1);
-		/* staggered: --percentage: clamp(0, (var(--progress) - (var(--char-index) / var(--char-total))) / (1 / var(--char-total)), 1); */
+		/* --percentage: clamp(0, (var(--progress) - (var(--char-index) / var(--char-total))) / (1 / var(--char-total)), 1); */
 	}
 
 	blockquote :global(.char::before),

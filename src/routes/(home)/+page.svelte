@@ -115,7 +115,7 @@
 					<div class="slide-up"><Twinkle class="h-7 delay-[250ms]" /></div>
 				</div>
 				<div
-					class="~text-lg/2xl leading-[1.45] @3xl:~@-3xl/5xl @3xl:~text-lg/2xl @3xl:~w-[24rem]/[31rem] @3xl:absolute bottom-[3.5%] right-0 slide-up"
+					class="~text-lg/2xl leading-[1.45] @3xl:~@3xl/5xl:~text-lg/2xl @3xl:~@3xl/5xl:~w-[24rem]/[31rem] @3xl:absolute bottom-[3.5%] right-0 slide-up"
 				>
 					<p class="delay-[200ms]">
 						The art of visual communication, creatively impacting the world around us&mdash;one good
@@ -199,7 +199,7 @@
 		>
 			<div>
 				<h2
-					class="text-gray-350 font-bold ~text-3xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
+					class="text-gray-350 font-bold ~text-5xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
 				>
 					<span class="inline-block align-baseline slide-up"
 						><span class="inline-block"
@@ -301,7 +301,7 @@
 		<header class="mb-16" use:observe>
 			<div class="flex flex-col @3xl:flex-row @3xl:justify-between @3xl:items-center mb-2 gap-[5%]">
 				<h2
-					class="text-gray-350 font-bold ~text-3xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
+					class="text-gray-350 font-bold ~text-5xl/8xl leading-none -tracking-[0.025em] uppercase @4xl:whitespace-nowrap"
 				>
 					<span class="inline-block align-baseline slide-up"
 						><span class="inline-block"
@@ -383,14 +383,14 @@
 				</div>
 			</div>
 			<h2
-				class="uppercase font-bold ~text-3xl/8xl leading-none lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up"
+				class="uppercase font-bold ~text-5xl/8xl leading-none lg:max-w-[10em] mx-auto text-center -tracking-[0.02em] slide-up"
 			>
 				<span class="block">Let's discuss<br/>your ideas</span>
 			</h2>
 			<div class="flex flex-wrap justify-center w-full gap-5 mt-16">
 				<div class="slide-up">
 					<div
-						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl/none font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-200 group"
+						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl font-medium uppercase tracking-[0.02em] bg-black px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap text-lime-200 group"
 					>
 						<div
 							class="group-hover:opacity-100 opacity-0 bg-gray-800 absolute inset-0 transition duration-150"
@@ -409,7 +409,7 @@
 				</div>
 				<div class="slide-up">
 					<div
-						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl/none font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap group"
+						class="cursor-not-allowed block relative rounded-full overflow-hidden ~text-lg/2xl font-medium uppercase tracking-[0.02em] shadow-[inset_0_0_0_2px_currentColor] px-[2em] pt-[0.85em] pb-[0.8em] whitespace-nowrap group"
 					>
 						<div class="overlap overflow-hidden text-center">
 							<span
